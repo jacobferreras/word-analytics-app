@@ -1,9 +1,18 @@
 import React from "react";
 
-export default function ClearTextButton() {
+interface ClearTextButtonProps {
+  onClick: () => void;
+}
+
+const ClearTextButton = ({ onClick }: ClearTextButtonProps) => {
   return (
-    <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-xl bg-red-500">
+    <button
+      className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl rounded-xl bg-red-500"
+      onClick={onClick}
+    >
       Clear Text
     </button>
   );
-}
+};
+
+export default ClearTextButton;

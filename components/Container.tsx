@@ -7,13 +7,13 @@ import TextArea from "./TextArea";
 import useCount from "@/hooks/useCount";
 
 const Container = () => {
-  const { text, word, character, handleChange } = useCount();
+  const { text, word, character, handleChange, handleClick } = useCount();
 
   return (
     <div className="flex justify-center py-12 gap-4">
       <TextAreaContainer>
         <TextArea text={text} handleChange={handleChange} />
-        <ClearTextButton />
+        <ClearTextButton onClick={handleClick} />
       </TextAreaContainer>
       <AnalyticsContainer word={word} character={character} />
     </div>

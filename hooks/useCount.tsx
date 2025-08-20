@@ -17,11 +17,18 @@ const useCount = () => {
     setCharacter(newText.length);
   };
 
+  const handleClick = () => {
+    setText("");
+    setWord(0);
+    setCharacter(0);
+  };
+
   return {
     text,
     word,
     character,
     handleChange,
+    handleClick,
   };
 };
 
