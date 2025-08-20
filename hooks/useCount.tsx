@@ -32,7 +32,6 @@ const useCount = () => {
     setFacebookChar(facebookCount < 0 ? 0 : facebookCount);
 
     const instagramCount = instagramChar - character;
-    9;
     setInstagramChar(instagramCount < 0 ? 0 : instagramCount);
   };
 
