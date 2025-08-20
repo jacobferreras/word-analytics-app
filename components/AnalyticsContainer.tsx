@@ -6,9 +6,20 @@ import PlatformCount from "./PlatfromCount";
 interface AnalyticsContainerProps {
   word: number;
   character: number;
+  sentence: number;
+  paragraph: number;
+  facebook: number;
+  instagram: number;
 }
 
-const AnalyticsContainer = ({ word, character }: AnalyticsContainerProps) => {
+const AnalyticsContainer = ({
+  word,
+  character,
+  sentence,
+  paragraph,
+  facebook,
+  instagram,
+}: AnalyticsContainerProps) => {
   return (
     <div className="card w-96 bg-white card-xl shadow-sm">
       <div className="card-body">
@@ -18,16 +29,16 @@ const AnalyticsContainer = ({ word, character }: AnalyticsContainerProps) => {
         <div className="gap-y-4">
           <Count label="Word Count" count={word} />
           <Count label="Character Count" count={character} />
-          <Count label="Sentence Count" count={0} />
-          <Count label="Paragraph Count" count={0} />
+          <Count label="Sentence Count" count={sentence} />
+          <Count label="Paragraph Count" count={paragraph} />
         </div>
 
         <h2 className=" text-gray-700 font-bold text-start text-2xl mt-2">
           Platform Limits
         </h2>
         <div>
-          <PlatformCount label="Facebook" count={63206} />
-          <PlatformCount label="Instagram" count={2200} />
+          <PlatformCount label="Facebook" count={facebook} />
+          <PlatformCount label="Instagram" count={instagram} />
         </div>
       </div>
     </div>
