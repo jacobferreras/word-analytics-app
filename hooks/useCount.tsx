@@ -28,10 +28,10 @@ const useCount = () => {
     const paragraphs = newText.split(/\n+/).filter((p) => p.trim().length > 0);
     setParagraph(paragraphs.length);
 
-    const facebookCount = facebookChar - character;
+    const facebookCount = facebookChar - newText.length;
     setFacebookChar(facebookCount < 0 ? 0 : facebookCount);
 
-    const instagramCount = instagramChar - character;
+    const instagramCount = instagramChar - newText.length;
     setInstagramChar(instagramCount < 0 ? 0 : instagramCount);
   };
 

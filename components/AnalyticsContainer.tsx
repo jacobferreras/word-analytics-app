@@ -37,8 +37,8 @@ const AnalyticsContainer = ({
           Platform Limits
         </h2>
         <div>
-          <PlatformCount label="Facebook" count={facebook} />
-          <PlatformCount label="Instagram" count={instagram} />
+          <PlatformCount label="Facebook" count={facebook} limit="63,206" />
+          <PlatformCount label="Instagram" count={instagram} limit="2,200" />
         </div>
       </div>
     </div>
