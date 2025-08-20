@@ -11,7 +11,7 @@ export const TextArea = ({ text, handleChange }: TextAreaProps) => {
     <div>
       <textarea
         className="textarea bg-white border-2 border-gray-400 text-black h-100"
-        placeholder="Bio"
+        placeholder="Enter text"
         value={text}
         onChange={handleChange}
       ></textarea>
