@@ -1,6 +1,6 @@
 "use client";
-import React, { use } from "react";
-import { useState } from "react";
+import React from "react";
+import { useState, useEffect } from "react";
 
 const useCount = () => {
   const [text, setText] = useState("");
@@ -32,6 +32,7 @@ const useCount = () => {
     setFacebookChar(facebookCount < 0 ? 0 : facebookCount);
 
     const instagramCount = instagramChar - character;
+    9;
     setInstagramChar(instagramCount < 0 ? 0 : instagramCount);
   };
 
@@ -44,6 +45,19 @@ const useCount = () => {
     setFacebookChar(63206);
     setInstagramChar(2200);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Backspace") {
+        setFacebookChar(63206);
+        setInstagramChar(2200);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [text]);
 
   return {
     text,
