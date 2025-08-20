@@ -28,11 +28,8 @@ const useCount = () => {
     const paragraphs = newText.split(/\n+/).filter((p) => p.trim().length > 0);
     setParagraph(paragraphs.length);
 
-    const facebookCount = facebookChar - 1;
-    setFacebookChar(facebookCount < 0 ? 0 : facebookCount);
-
-    const instagramCount = instagramChar - 1;
-    setInstagramChar(instagramCount < 0 ? 0 : instagramCount);
+    setFacebookChar(Math.max(63206 - newText.length, 0));
+    setInstagramChar(Math.max(2200 - newText.length, 0));
   };
 
   const handleClick = () => {
@@ -44,19 +41,6 @@ const useCount = () => {
     setFacebookChar(63206);
     setInstagramChar(2200);
   };
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Backspace") {
-        setFacebookChar(63206);
-        setInstagramChar(2200);
-      }
-    };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [text]);
 
   return {
     text,
