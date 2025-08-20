@@ -1,8 +1,14 @@
+"use client";
 import React from "react";
 import Count from "./Count";
 import PlatformCount from "./PlatfromCount";
 
-export default function AnalyticsContainer() {
+interface AnalyticsContainerProps {
+  word: number;
+  character: number;
+}
+
+const AnalyticsContainer = ({ word, character }: AnalyticsContainerProps) => {
   return (
     <div className="card w-96 bg-white card-xl shadow-sm">
       <div className="card-body">
@@ -10,8 +16,8 @@ export default function AnalyticsContainer() {
           Analysis Result
         </h2>
         <div className="gap-y-4">
-          <Count label="Word Count" count={0} />
-          <Count label="Character Count" count={0} />
+          <Count label="Word Count" count={word} />
+          <Count label="Character Count" count={character} />
           <Count label="Sentence Count" count={0} />
           <Count label="Paragraph Count" count={0} />
         </div>
@@ -26,4 +32,6 @@ export default function AnalyticsContainer() {
       </div>
     </div>
   );
-}
+};
+
+export default AnalyticsContainer;
