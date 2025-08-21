@@ -36,7 +36,7 @@ const AnalyticsContainer = ({
         <h2 className=" text-gray-700 font-bold text-center text-2xl my-4">
           Platform Limits
         </h2>
-        <div className="flex flex-row">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <PlatformCount
             label="Facebook"
             count={facebook}
