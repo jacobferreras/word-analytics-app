@@ -33,8 +33,8 @@ const useCount = () => {
     characterCount = 0;
     sentenceCount = 0;
     paragraphCount = 0;
-    facebookCharCount = 63206;
-    instagramCharCount = 2200;
+    facebookCharCount = FacebookLimit;
+    instagramCharCount = InstagramLimit;
   };
 
   return {
