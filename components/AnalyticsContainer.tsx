@@ -21,9 +21,9 @@ const AnalyticsContainer = ({
   instagram,
 }: AnalyticsContainerProps) => {
   return (
-    <div className="card w-96 bg-white card-xl shadow-sm">
+    <div className="card w-auto md:w-96 bg-white card-xl shadow-sm">
       <div className="card-body">
-        <h2 className=" text-black font-bold text-center text-2xl mb-2">
+        <h2 className=" text-black font-bold text-start text-3xl mb-2">
           Analysis Result
         </h2>
         <div className="gap-y-4">

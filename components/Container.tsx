@@ -20,7 +20,7 @@ const Container = () => {
   } = useCount();
 
   return (
-    <div className="flex justify-center py-12 gap-4">
+    <div className="flex flex-col justify-center py-12 gap-4 px-4 md:flex-row">
       <TextAreaContainer>
         <TextArea text={text} handleChange={handleChange} />
         <ClearTextButton onClick={handleClick} />
