@@ -9,12 +9,12 @@ import useCount from "@/hooks/useCount";
 const Container = () => {
   const {
     text,
-    word,
-    character,
-    sentence,
-    paragraph,
-    facebookChar,
-    instagramChar,
+    wordCount,
+    characterCount,
+    sentenceCount,
+    paragraphCount,
+    facebookCharCount,
+    instagramCharCount,
     handleChange,
     handleClick,
   } = useCount();
@@ -26,12 +26,12 @@ const Container = () => {
         <ClearTextButton onClick={handleClick} />
       </TextAreaContainer>
       <AnalyticsContainer
-        word={word}
-        character={character}
-        sentence={sentence}
-        paragraph={paragraph}
-        facebook={facebookChar}
-        instagram={instagramChar}
+        word={wordCount}
+        character={characterCount}
+        sentence={sentenceCount}
+        paragraph={paragraphCount}
+        facebook={facebookCharCount}
+        instagram={instagramCharCount}
       />
     </div>
   );
