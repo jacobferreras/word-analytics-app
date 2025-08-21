@@ -2,9 +2,10 @@
 import React from "react";
 import { useState } from "react";
 
+const FacebookLimit = 63206;
+const InstagramLimit = 2200;
+
 const useCount = () => {
-  const FacebookLimit = 63206;
-  const InstagramLimit = 2200;
   const [text, setText] = useState("");
 
   const trimmedText = text.trim();
